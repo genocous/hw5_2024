@@ -80,7 +80,7 @@ Check your work. The corners probably aren’t curving quite as you expected. Us
 Steps 7 and 8 go together.  You won’t have the right “look” until you finish both.
 */
 
-.card header {
+.card > header {
     background-color: #288088;
     border: 2px solid #45ADAD;
     padding: 20px 0 20px 0;
@@ -90,8 +90,9 @@ Steps 7 and 8 go together.  You won’t have the right “look” until you fini
 
 
 .card {
-    overflow: hidden;
+    border-radius: 50px 50px 0 0;
 }
+
 /*
 7.	Edit the css for the card class to match our example. Achieve this by using a flex-property to specify an initial “size” of 450px.  You need to think about this from a “flex” perspective and realize that flex-direction will affect the size of the elements.  You can see that in the mobile view they all have the same width. 
 */
@@ -234,9 +235,9 @@ Steps 7 and 8 go together.  You won’t have the right “look” until you fini
     /*
     21.	Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine.
     */
-    .card::before {
-        content: "\1F44D";
-    }
+    .card li:nth-of-type(2)::after {
+        content: '\1F44D'; 
+      }
 }
 
 
